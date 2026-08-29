@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+
+body {
+  background-color: #181818 !important;
+}
+
+.color-titulo {
+  color: white;
+  background-color: #f06a20;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 3.5%;
+  margin-bottom: 2.5%;
+  padding: 10px 10px;
+  display: inline-block;
+}
+
+.navbar-nav .nav-link {
+  color: #FFFFFF !important;
+}
+
+.nav-tab {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  padding: 1.5rem 2rem;
+  background-color: grey;
+}
+
+.nav-tab ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-tab a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-tab a:hover {
+  color: white;
+}
+
+.nav-tab img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+}
+
+.producto-contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.producto {
+  padding: 1rem;
+  background-color: grey;
+
+  text-align: center;
+}
+
+.producto img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  max-width: 250px;
+}
+
+.producto p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.producto button {
+  padding: 3px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: white;
+}
+
+.titulo-productos {
+  text-align: center;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  color: black;
+  font-size: 2rem;
+}
