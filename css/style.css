@@ -97,3 +97,128 @@ body {
     color: orange;
     font-size: 2rem;
 }
+
+.ruta {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 2rem;
+    margin-left: 2rem;
+    gap: 1rem;
+}
+
+.ruta ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.ruta li {
+    color: white;
+    list-style: none;
+}
+
+.ruta a {
+    color: white;
+    text-decoration: none;
+}
+
+.detalle-main-container {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 2rem;
+    margin-left: 2rem;
+    gap: 5rem;
+}
+
+.detalle-main-container button{
+    border: none;
+    color: black;
+    background-color: orange;
+
+    cursor: pointer;
+}
+
+.detalle-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+}
+
+.parrafo-producto {
+    width: 100%;
+    max-width: 450px;
+
+    color: white;
+}
+
+.cantidad-producto {
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+}
+
+.cantidad-producto h3 {
+    color: white;
+}
+
+.cantidad-producto select {
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.nombre-precio {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+    color: white;
+}
+
+.foto-detalle-producto-container {
+    width: 100%;
+    max-width: 500px;
+    
+    padding: 1rem;
+    background-color: grey;
+    border: 2px solid orange;
+}
+
+.foto-principal {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 2px solid black;
+}
+
+.detalle-mini-foto-container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.detalle-mini-foto-container img {
+    display: block;
+
+    width: 80px;
+    height: 80px;
+
+    object-fit: cover;
+    border: 2px solid black;
+
+    cursor: pointer;
+}
+
+.detalle-mini-foto-container img:hover {
+    border: 2px solid orange;
+}

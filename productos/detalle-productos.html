@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>detalle-producto</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/img/VolTech Logo - Sin texto.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav-tab">
+      <a href="#">
+        <img src="/img/VolTech Logo - Sin texto.png" alt="icono-tab">
+      </a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+
+    <ul class="ruta">
+      <li><a href="#">Home ></a></li>
+      <li><a href="#">Categoria ></a></li>
+      <li>Cable HDMI</li>
+    </ul>
+
+    <div class="detalle-main-container">
+
+      <div class="foto-detalle-producto-container">
+        <img class="foto-principal" src="/img/producto.jpg" alt="producto-grande">
+
+        <div class="detalle-mini-foto-container">
+          <img src="/img/producto.jpg" alt="min-prod-1">
+          <img src="/img/producto.jpg" alt="min-prod-2">
+          <img src="/img/producto.jpg" alt="min-prod-3">
+        </div>
+      </div>
+
+      <div class="detalle-container">
+
+        <div class="nombre-precio">
+          <h2><span id="nombre-producto"></span></h2>
+          <h2>$<span id="precio-producto"></span></h2>
+        </div>
+
+        <p class="parrafo-producto">
+          Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Quisque erat metus, 
+          facilisis ac lectus vitae, pharetra tristique metus. 
+          Ut fringilla placerat eleifend. Orci varius natoque penatibus et magnis dis parturient montes, 
+          nascetur ridiculus mus. Fusce id pellentesque libero, 
+          eu dignissim ipsum. Integer in mi semper, commodo felis nec, 
+          mollis ipsum. Aliquam ac nulla commodo, fermentum neque in, commodo nibh. Suspendisse in neque leo. 
+          Nulla sit amet lorem porta, fringilla mi vel, 
+          faucibus arcu. 
+        </p>
+
+        <div class="cantidad-producto">
+          <h3>Cantidad</h3>
+
+          <select name="numeros" id="numeros">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <button>Agregar al Carrito</button>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
