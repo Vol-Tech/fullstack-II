@@ -29,6 +29,13 @@ const inventario = {
     'PROD03': { nombre: "Monitor ASUS 120Hz", precio: 150000 }
 };
 
+
+/*
+debo ver como hacer que se pase el diccionario a json en forma más
+funcional y mantenible y más eficiente, se debe consultar al profe
+desde la linea 39 a 46
+*/
+
 localStorage.setItem('inventario', JSON.stringify(inventario));
 const data = JSON.parse(localStorage.getItem('inventario'));
 
