@@ -45,7 +45,7 @@ function mostrarNombrePrecio(llave, idNom, idPre) {
 
 }
 /*
- logre hacer que se muestren weas diferentes del diccionario de forma
+ logre hacer que se muestren COSAS diferentes del diccionario de forma
  eficiente con esta funcion anonima
 */
 document.addEventListener('DOMContentLoaded', () => {
