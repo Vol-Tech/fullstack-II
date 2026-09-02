@@ -12,10 +12,11 @@ header {
 .nav-tab {
     display: flex;
     flex-direction: row;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.5);
     gap: 2rem;
 
     padding: 1.5rem 2rem;
-    background-color: black;
+    background-color: #FFFFFF;
 }
 
 .nav-tab ul {
@@ -28,12 +29,12 @@ header {
 }
 
 .nav-tab a {
-    color: white;
+    color: #64748B;
     text-decoration: none;
 }
 
 .nav-tab a:hover {
-    color: orange;
+    color: #4F46E5;
 }
 
 .nav-tab img {
