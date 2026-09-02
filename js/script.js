@@ -29,18 +29,27 @@ const inventario = {
     'PROD03': { nombre: "Monitor ASUS 120Hz", precio: 150000 }
 };
 
-
-/*
-debo ver como hacer que se pase el diccionario a json en forma más
-funcional y mantenible y más eficiente, se debe consultar al profe
-desde la linea 39 a 46
-*/
-
 localStorage.setItem('inventario', JSON.stringify(inventario));
 const data = JSON.parse(localStorage.getItem('inventario'));
 
-const nombreSpan1 = document.getElementById('nombre-producto');
-const precioSpan1 = document.getElementById('precio-producto');
+function mostrarNombrePrecio(llave, idNom, idPre) {
+    const llaveInv = data[llave];  
 
-nombreSpan1.textContent = data['PROD01'].nombre;
-precioSpan1.textContent = data['PROD01'].precio;
+    const nombre = document.getElementById(idNom);
+    const precio = document.getElementById(idPre);
+
+    if (llaveInv && nombre && precio) {
+        nombre.textContent = llaveInv.nombre;
+        precio.textContent = llaveInv.precio;
+    }
+
+}
+/*
+ logre hacer que se muestren weas diferentes del diccionario de forma
+ eficiente con esta funcion anonima
+*/
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarNombrePrecio('PROD01', 'nom-pro-1', 'pre-pro-1');
+    mostrarNombrePrecio('PROD02', 'nom-pro-2', 'pre-pro-2');
+    mostrarNombrePrecio('PROD03', 'nom-pro-3', 'pre-pro-3');
+});
