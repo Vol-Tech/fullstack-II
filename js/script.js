@@ -24,9 +24,9 @@ precioSpan.textContent = data.precio;
 //test de tener muchos productos?*/
 
 const inventario = {
-    'PROD01': { nombre: "Cable HDMI", precio: 4500 },
-    'PROD02': { nombre: "Cable DVI", precio: 7500 },
-    'PROD03': { nombre: "Monitor ASUS 120Hz", precio: 150000 }
+    'PROD01': { nombre: "Cable HDMI", precio: 4.500 },
+    'PROD02': { nombre: "Cable DVI", precio: 7.500 },
+    'PROD03': { nombre: "Monitor ASUS 120Hz", precio: 150.000 }
 };
 
 localStorage.setItem('inventario', JSON.stringify(inventario));
