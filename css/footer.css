@@ -1,0 +1,77 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.foot-container {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 -1.5px 3px rgba(100, 116, 139, 0.5);
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    margin-top: auto;
+    background-color: #FFFFFF;
+}
+
+.foot-info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+}
+
+.foot-info ul {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.foot-info ul li:last-child {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.foot-info a {
+    color: #64748B;
+    text-decoration: none;
+}
+
+.foot-info a:hover {
+    color: #4F46E5;
+}
+
+.foot-info p {
+    color: #64748B;
+}
+
+.foot-tab {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.foot-tab ul {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+
+    list-style: none;
+    gap: 2rem;
+}
+
+.foot-tab ul li:last-child {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.icono-visa::before {
+    font-family: "bootstrap-icons";
+    font-style: normal;
+    font-size: 1.5rem;
+
+    content: "\F2DB";
+    color: #4F46E5;
+}
