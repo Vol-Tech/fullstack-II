@@ -1,22 +1,22 @@
 const regiones = {
-    'Región Metropolitana de Santiago': { comuna: "" },
-    'Región de la Araucanía': { comuna: ""},
-    'Región de Ñuble': { comuna: ""}
+    'Región Metropolitana de Santiago': { comuna: ["Santiago", "La Florida"] },
+    'Región de la Araucanía': { comuna: ["Villarica", "Pucón"]},
+    'Región de Ñuble': { comuna: ["Chillán", "San Carlos"]}
 };
 
-localStorage.setItem('regiones', JSON.stringify(regiones));
-const datosRegiones = JSON.parse(localStorage.getItem('regiones'));
+const selectRegion = document.getElementById('sel-region');
+const selectComuna = document.getElementById('sel-comuna');
 
+// lo mismo que para producto, pero solo recorre llaves
 function mostrarRegiones() {
-    Object.entries(regiones).forEach(([llave, valor], index) => {
-        const region = document.getElementById(``);
-        const comuna = document.getElementById(``);
+    Object.keys(regiones).forEach(nombreRegion => {
+        const opcion = document.createElement('option');
 
-        if (region && comuna) {
-            region.textContent = llave;
-            comuna.textContent = valor.comuna;
-        }
+        opcion.value = nombreRegion;
+        opcion.textContent = nombreRegion;
+
+        selectRegion.appendChild(opcion);
     })
-};
+}
 
 document.addEventListener('DOMContentLoaded', mostrarRegiones);

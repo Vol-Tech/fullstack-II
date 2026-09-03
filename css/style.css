@@ -264,3 +264,18 @@ body {
     background-color: #2E2A88;
     color: #FFFFFF;
 }
+
+.select-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.select-container select {
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.select-container select:hover {
+    border: 1px solid #7B7CFF;
+}
