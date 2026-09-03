@@ -3,3 +3,4 @@ const usuariosRegistrados = [
     new Usuario("192345625", "Jim", "Halpert", "threeholepunchjim@gmail.com", "Cliente"),
     new Usuario("18323633K", "Dwight", "Schrute", "theschrutes@gmail.com", "Cliente")
 ];
+

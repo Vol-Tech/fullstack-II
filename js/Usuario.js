@@ -22,8 +22,10 @@ class Usuario {
     }
 
     validarCorreo(correo) {
-        const dominiosValidos = ["@duoc.cl", "@profesor.duoc.cl", "@gmail.com"]
-        // const esValido
+        const dominiosValidos = ["@duoc.cl", "@profesor.duoc.cl", "@gmail.com"];
+        // arrow function de dominio, pasa el correo a minusculas y ve si termina con lo que recorre de la lista
+        // de dominios
+        const esValido = dominiosValidos.some(dominio => correo.toLowerCase().endsWith(dominio))
         if (!esValido) {
             throw new Error("Error: el dominio debe ser: '@duoc.cl', '@profesor.duoc.cl', '@gmail.com'");
         }
