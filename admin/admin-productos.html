@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolTech - Administración de Productos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-container">
+        <!-- Menú Lateral del Administrador -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>⚡ VolTech</h2>
+            </div>
+            <ul class="admin-menu">
+                <li><a href="admin-home.html">📊 Dashboard</a></li>
+                <li><a href="admin-pedidos.html">📦 Pedidos</a></li>
+                <li><a href="admin-productos.html" class="active">🛠️ Inventario</a></li>
+                <li><a href="admin-reportes.html">📄 Reportes</a></li>
+                <li><a href="admin-empleados.html">👔 Empleados</a></li>
+                <li><a href="admin-usuarios.html">👥 Clientes</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Gestión de Productos</h2>
+                <div class="admin-user-info"><span>👤 Administrador</span></div>
+            </header>
+
+            <section class="admin-content">
+                <div class="form-card">
+                    <h3>Nuevo / Editar Producto</h3>
+                    <form id="form-producto">
+                        
+                        <div class="form-group">
+                            <label for="codigo-prod">Código producto (Mínimo 3 caracteres):</label>
+                            <input type="text" id="codigo-prod" required minlength="3" placeholder="Ej. PROD01">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre-prod">Nombre (Máximo 100 caracteres):</label>
+                            <input type="text" id="nombre-prod" required maxlength="100" placeholder="Nombre del componente">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="desc-prod">Descripción (Opcional, máx. 500 caracteres):</label>
+                            <textarea id="desc-prod" maxlength="500" placeholder="Detalle técnico del artículo..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="precio-prod">Precio (Mín. 0 para producto FREE):</label>
+                            <input type="number" id="precio-prod" required min="0" step="any" placeholder="1000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stock-prod">Stock (Números enteros, mín. 0):</label>
+                            <input type="number" id="stock-prod" required min="0" step="1" placeholder="10">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stock-critico">Stock Crítico (Alerta de inventario bajo):</label>
+                            <input type="number" id="stock-critico" min="0" step="1" placeholder="3">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoria-prod">Categoría:</label>
+                            <select id="categoria-prod" required>
+                                <option value="">-- Seleccione Categoría --</option>
+                                <option value="hardware">Hardware</option>
+                                <option value="perifericos">Periféricos</option>
+                                <option value="notebooks">Notebooks</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Guardar Producto</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

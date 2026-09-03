@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolTech - Administración de Pedidos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-container">
+        <!-- Menú Lateral del Administrador -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>⚡ VolTech</h2>
+            </div>
+            <ul class="admin-menu">
+                <li><a href="admin-home.html">📊 Dashboard</a></li>
+                <li><a href="admin-pedidos.html" class="active">📦 Pedidos</a></li>
+                <li><a href="admin-productos.html">🛠️ Inventario</a></li>
+                <li><a href="admin-reportes.html">📄 Reportes</a></li>
+                <li><a href="admin-empleados.html">👔 Empleados</a></li>
+                <li><a href="admin-usuarios.html">👥 Clientes</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Gestión de Pedidos</h2>
+                <div class="admin-user-info"><span>👤 Administrador</span></div>
+            </header>
+
+            <section class="admin-content-table">
+                <div class="table-card">
+                    <div class="table-header-controls">
+                        <select class="table-filter">
+                            <option value="all">Todos los Pedidos ▾</option>
+                        </select>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Fecha ↕</th>
+                                    <th>N° Pedido ↕</th>
+                                    <th>Cliente ↕</th>
+                                    <th>Estado ↕</th>
+                                    <th>Monto (CLP) ↕</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026-06-01</td>
+                                    <td>PED1001</td>
+                                    <td>Juan Pérez González</td>
+                                    <td><span class="status shipped">Completado</span></td>
+                                    <td>$2.500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-02</td>
+                                    <td>PED1002</td>
+                                    <td>María Soto Silva</td>
+                                    <td><span class="status pending">Pendiente</span></td>
+                                    <td>$1.200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-02</td>
+                                    <td>PED1003</td>
+                                    <td>Carlos Tapia Morales</td>
+                                    <td><span class="status cancelled">Cancelado</span></td>
+                                    <td>$500.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-03</td>
+                                    <td>PED1004</td>
+                                    <td>Ana Alarcón Rojas</td>
+                                    <td><span class="status processing">En proceso</span></td>
+                                    <td>$750.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-04</td>
+                                    <td>PED1005</td>
+                                    <td>Pedro Valenzuela Soto</td>
+                                    <td><span class="status shipped">Completado</span></td>
+                                    <td>$3.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-05</td>
+                                    <td>PED1006</td>
+                                    <td>Camila Fuentes Díaz</td>
+                                    <td><span class="status pending">Pendiente</span></td>
+                                    <td>$1.150.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-06</td>
+                                    <td>PED1007</td>
+                                    <td>Diego Contreras Muñoz</td>
+                                    <td><span class="status shipped">Completado</span></td>
+                                    <td>$2.300.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-07</td>
+                                    <td>PED1008</td>
+                                    <td>Valentina Riquelme Espinoza</td>
+                                    <td><span class="status processing">En proceso</span></td>
+                                    <td>$900.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-08</td>
+                                    <td>PED1009</td>
+                                    <td>Felipe Herrera Castillo</td>
+                                    <td><span class="status cancelled">Cancelado</span></td>
+                                    <td>$600.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-06-09</td>
+                                    <td>PED1010</td>
+                                    <td>Francisca Vergara Lara</td>
+                                    <td><span class="status shipped">Completado</span></td>
+                                    <td>$1.850.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Paginación -->
+                    <div class="pagination">
+                        <button>&laquo;</button>
+                        <button>&lsaquo;</button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>10</button>
+                        <button>&rsaquo;</button>
+                        <button>&raquo;</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

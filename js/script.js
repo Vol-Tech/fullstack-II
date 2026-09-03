@@ -75,3 +75,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// --- VALIDACIÓN DEL FORMULARIO DE ADMINISTRACIÓN DE PRODUCTOS ---
+document.addEventListener('DOMContentLoaded', () => {
+    const formProducto = document.getElementById('form-producto');
+    
+    if (formProducto) {
+        formProducto.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const codigo = document.getElementById('codigo-prod').value;
+            const stock = parseInt(document.getElementById('stock-prod').value);
+            const stockCritico = parseInt(document.getElementById('stock-critico').value) || 0;
+
+            if (codigo.length < 3) {
+                alert("El código del producto debe tener al menos 3 caracteres.");
+                return;
+            }
+
+            if (stock <= stockCritico) {
+                alert("⚠️ Alerta: El stock actual se encuentra en nivel crítico o agotado.");
+            }
+
+            alert("¡Producto guardado y registrado correctamente en el sistema!");
+            formProducto.reset();
+        });
+    }
+});
