@@ -18,35 +18,18 @@ const inventario = {
 localStorage.setItem('inventario', JSON.stringify(inventario));
 const datosInventario = JSON.parse(localStorage.getItem('inventario'));
 
-function mostrarNombrePrecio(llave, idNom, idPre) {
-    const llaveInv = datosInventario[llave];  
+// object pasa todo a una suerte de diccionario, asi que use un for each para mostrar mejor los productos
 
-    const nombre = document.getElementById(idNom);
-    const precio = document.getElementById(idPre);
+function mostrarProducto() {
+    Object.entries(inventario).forEach(([_, valor], index) => {
+        const nombre = document.getElementById(`nom-pro-${index + 1}`);
+        const precio = document.getElementById(`pre-pro-${index + 1}`);
 
-    if (llaveInv && nombre && precio) {
-        nombre.textContent = llaveInv.nombre;
-        precio.textContent = llaveInv.precio;
-    }
+        if (nombre && precio) {
+            nombre.textContent = valor.nombre
+            precio.textContent = valor.precio
+        }
+    })
+};
 
-}
-/*
- logre hacer que se muestren COSAS diferentes del diccionario de forma
- eficiente con esta funcion anonima
-*/
-document.addEventListener('DOMContentLoaded', () => {
-    mostrarNombrePrecio('PROD01', 'nom-pro-1', 'pre-pro-1');
-    mostrarNombrePrecio('PROD02', 'nom-pro-2', 'pre-pro-2');
-    mostrarNombrePrecio('PROD03', 'nom-pro-3', 'pre-pro-3');
-    mostrarNombrePrecio('PROD04', 'nom-pro-4', 'pre-pro-4');
-
-    mostrarNombrePrecio('PROD05', 'nom-pro-5', 'pre-pro-5');
-    mostrarNombrePrecio('PROD06', 'nom-pro-6', 'pre-pro-6');
-    mostrarNombrePrecio('PROD07', 'nom-pro-7', 'pre-pro-7');
-    mostrarNombrePrecio('PROD08', 'nom-pro-8', 'pre-pro-8');
-
-    mostrarNombrePrecio('PROD09', 'nom-pro-9', 'pre-pro-9');
-    mostrarNombrePrecio('PROD10', 'nom-pro-10', 'pre-pro-10');
-    mostrarNombrePrecio('PROD11', 'nom-pro-11', 'pre-pro-11');
-    mostrarNombrePrecio('PROD12', 'nom-pro-12', 'pre-pro-12');
-});
+document.addEventListener('DOMContentLoaded', mostrarProducto);

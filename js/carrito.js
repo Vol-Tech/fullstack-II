@@ -1,2 +1,1 @@
-let carrito = {}
-
+let carrito = {};
