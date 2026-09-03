@@ -8,14 +8,14 @@ class Usuario {
     }
 
     validarRun(run) {
-        if (run.lenght < 7 || run.lenght > 9 || run.includes('-') || run.includes('.')) {
+        if (run.length < 7 || run.length > 9 || run.includes('-') || run.includes('.')) {
             throw new Error("Error: el run debe tener minimo 7 caracteres, maximo 9 y no debe contener puntos ni guion");   
         }
         return run;
     }
 
     validarLargo(texto, maximo) {
-        if (texto.lenght > maximo) {
+        if (texto.length > maximo) {
             throw new Error(`El texto excede el maximo de caracteres que son: ${maximo}`);
         }
         return texto;
@@ -32,3 +32,32 @@ class Usuario {
         return correo;
     }
 }
+
+const formulario = document.getElementById('formulario');
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('regNombre').value;
+    const correo = document.getElementById('regCorreo').value;
+    const confirmarCorreo = document.getElementById('regConfirmarCorreo').value;
+    const contraseña = document.getElementById('regContraseña').value;
+    const confirmarContra = document.getElementById('regConfirmContraseña').value;
+    const telefono = document.getElementById('regTelefono').value;
+
+    if (correo != confirmarCorreo) {
+        alert("Los correos no coinciden");
+        return;
+    }
+
+    if (contraseña != confirmarContra) {
+        alert("Las contraseñas no coinciden");
+        return;
+    }
+
+   try {
+        
+   } catch (error) {
+    
+   }
+});

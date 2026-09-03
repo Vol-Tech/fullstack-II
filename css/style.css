@@ -242,6 +242,14 @@ body {
     color: #1E2038;
 }
 
+.form-container input {
+    border: 1px solid #FFFFFF;
+}
+
+.form-container input:hover {
+    border: 1px solid #7B7CFF;
+}
+
 .form-container button {
     color: #FFFFFF;
     background-color: #4F46E5;
