@@ -59,6 +59,65 @@ header {
     color: #64748B;
 }
 
+.menu-habilitar {
+    display: none;
+}
+
+.menu-icono {
+    display: none;
+    font-size: 2rem;
+
+    color: #64748B;
+    cursor: pointer;
+}
+
 .icono-carrito:hover::before {
     color: #4F46E5;
+}
+
+@media (max-width: 768px) {
+
+    .nav-tab {
+        justify-content: space-between;
+        align-items: center;
+        
+        padding: 1rem 1.5rem;
+        position: relative;
+        
+    }
+
+    .menu-icono {
+        display: block;
+    }
+
+    .nav-tab ul {
+        display: none;
+        flex-direction: column;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: #FFFFFF;
+        padding: 2rem 0;
+        gap: 1.5rem;
+
+        box-shadow: 0 4px 6px rgba(100, 116, 139, 0.2);
+    }
+
+    .nav-tab ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-tab ul li:last-child {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-habilitar:checked ~ ul {
+        display: flex;
+    }
 }

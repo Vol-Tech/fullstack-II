@@ -233,6 +233,8 @@ body {
 
     background-color: #E2E5FF;
     border: 1.5px solid #7B7CFF;
+
+    margin: 0 auto;
     padding: 3rem 2rem;
     border-radius: 8px;
 }
