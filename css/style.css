@@ -6,24 +6,149 @@ body {
     background-color: #F5F6FF;
 }
 
+.titulo-index {
+    text-align: center;
+}
+
+.titulo-index h3 {
+    color: #039e0b;
+}
+
+.blog-tarjeta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #adadff;
+
+    margin: 2.3rem;
+
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.blog-imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 1.5px solid #4d4a8f6b;
+}
+
+.titulo-blogs {
+    text-align: center;
+
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+
+    color: #1E2038;
+    font-size: 2.5rem;
+}
+
+.blog-tarjeta button {
+    color: #FFFFFF;
+    background-color: #4F46E5;
+    padding: 13px 20px;
+    border-radius: 1.5px;
+
+    margin-top: 2.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.blog-tarjeta button:hover {
+    background-color: #2E2A88;
+    color: #FFFFFF;
+}
+
+.blog-tarjeta h3{
+    font-size: 1.7rem;
+    margin-bottom: 9%;
+}
+
+/* Css reutilizado del Ignacio al mio al Index*/
 .index-desc {
-    padding:7.5rem;
-    width: 70%;
-    height: 30%;
-    background-color:#9d9dff !important;
-    border-radius: 2px;
+    width: 45%;
     text-align: left;
 }
 
 .index-contenedor {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 
-    margin: 2rem;
+    background-color: #adadff;
+
+    margin: 2.3rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+
+    padding: 4rem;
     gap: 2rem;
 }
+
+.index-contenedor p {
+    font-size: 1.4rem;
+}
+
+.index-contenedor h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3.4%;
+}
+
+.index-imagen img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 1.5px solid #4d4a8f6b;
+}
+
+.producto-oferta {
+    padding: 1rem;
+    background-color: #d8fdeb;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+.producto-oferta img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+    max-width: 250px;
+}
+
+.producto-oferta a {
+    display: block;
+    width: 100%;
+}
+
+.producto-oferta button {
+    color: #FFFFFF;
+    background-color: #00C853;
+    padding: 3px 10px;
+    border-radius: 1.5px;
+
+    border: none;
+    cursor: pointer;
+}
+
+.producto-oferta button:hover {
+    background-color: #039e43;
+    color: #FFFFFF;
+}
+
+.producto-oferta:hover {
+    border: 1.5px solid #95fac7;
+}
+
+/* Css reutilizado del Ignacio al mio*/
 
 .producto-contenedor {
     display: flex;
