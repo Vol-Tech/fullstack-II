@@ -6,6 +6,85 @@ body {
     background-color: #F5F6FF;
 }
 
+/* css del contacto */
+
+.contacto-encabezado {
+    text-align: center;
+
+    margin-top: 2.4rem;
+    margin-bottom: 0.6rem;
+
+    color: #1E2038;
+    font-size: 1.5rem;
+}
+
+.contacto-encabezado img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.contacto-contenedor button {
+    color: #FFFFFF;
+    background-color: #4F46E5;
+    padding: 13px 20px;
+    border-radius: 1.5px;
+
+    margin-bottom: 0.5rem;
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+
+    border: none;
+    cursor: pointer;
+}
+
+.contacto-contenedor button:hover {
+    background-color: #2E2A88;
+    color: #FFFFFF;
+}
+
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80%;
+    padding: 2rem;
+}
+
+.contacto-tarjeta {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #adadff;
+
+    padding: 4.2rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.contacto-titulo {
+    background-color: #E2E5FF;
+    padding: 12px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 2.6rem;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* fin del css del contacto */
+
 .titulo-index {
     text-align: center;
 }
@@ -61,7 +140,7 @@ body {
     color: #FFFFFF;
 }
 
-.blog-tarjeta h3{
+.blog-tarjeta h3 {
     font-size: 1.7rem;
     margin-bottom: 9%;
 }
