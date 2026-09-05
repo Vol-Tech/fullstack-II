@@ -274,6 +274,9 @@ body {
 }
 
 .select-container select {
+    width: 100%;
+    max-width: 450px;
+
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
 }

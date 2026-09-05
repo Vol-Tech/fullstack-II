@@ -20,3 +20,19 @@ function mostrarRegiones() {
 }
 
 document.addEventListener('DOMContentLoaded', mostrarRegiones);
+
+selectRegion.addEventListener('change', (e) => {
+    selectComuna.innerHTML = "";
+
+    const region = e.target.value;
+    const comunas = regiones[region].comuna;
+
+    comunas.forEach((value) => {
+        const opcion = document.createElement('option');
+
+        opcion.value = value;
+        opcion.textContent = value;
+
+        selectComuna.appendChild(opcion);
+    })
+});
