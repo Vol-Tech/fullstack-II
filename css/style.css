@@ -284,3 +284,20 @@ body {
 .select-container select:hover {
     border: 1px solid #7B7CFF;
 }
+
+.nom-apellidos-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.nom-apellidos-container input {
+    width: 100%;
+    max-width: 450px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.nom-apellidos-container input:hover {
+    border: 1px solid #7B7CFF;
+}

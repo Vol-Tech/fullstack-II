@@ -32,8 +32,13 @@
 
     <form class="form-container" id="formulario">
       <h3>Registro de usuario</h3>
-      <h4>Nombre Completo</h4>
-      <input type="text" id="regNombre" required>
+      <h4>Run</h4>
+      <input type="text" id="regRun" required>
+      <h4>Nombre</h4>
+      <div class="nom-apellidos-container">
+        <input type="text" id="regNombre" required>
+        <input type="text" id="regApellido" required>
+      </div>
       <h4>Correo</h4>
       <input type="email" id="regCorreo" required>
       <h4>Confirmar Correo</h4>
@@ -47,11 +52,11 @@
 
       <div class="select-container">
         <select name="region" id="sel-region">
-          <option value="">Seleccione la Region</option>
+          <option value="" id="idRegion">Seleccione la Region</option>
         </select>
 
         <select name="comuna" id="sel-comuna">
-          <option value="">Seleccione la Comuna</option>
+          <option value="" id="idComuna">Seleccione la Comuna</option>
         </select>
       </div>
 
@@ -63,6 +68,8 @@
   <footer>
 
   </footer>
+
+  <script src="js/usuariosRegistrados.js"></script>
 
   <script src="js/Usuario.js"></script>
   <script src="js/regiones.js"></script>
