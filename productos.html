@@ -4,144 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolTech - Productos</title>
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="img/VolTech Logo - Sin texto.png" type="image/x-icon">
 </head>
 <body>
 
-    <!-- Menú de navegación -->
-    <header class="navbar">
-        <div class="nav-left">
-            <div class="logo">
-                <h2><span class="logo-icon">⚡V</span>olTech</h2>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="productos.html" class="active">Productos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="user-actions">
-            <a href="login.html">Iniciar sesión</a>
-            <span class="separator">|</span>
-            <a href="registro-usuario.html">Registrar usuario</a>
-            <a href="carrito.html" class="cart">🛒 Carrito (0)</a>
-        </div>
+    <header>
+        <nav class="nav-tab">
+            <a href="index.html">
+                <img src="img/VolTech Logo - Sin texto.png" alt="VolTech Logo">
+            </a>
+            <input type="checkbox" id="menu-habilitar" class="menu-habilitar">
+            <label for="menu-habilitar" class="menu-icono"><i class="bi bi-list"></i></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html" style="color: #4F46E5; font-weight: bold;">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a class="icono-carrito" href="carrito.html"></a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h1 class="page-title">PRODUCTOS</h1>
+        <h1 class="titulo-productos">PRODUCTOS</h1>
         
-        <section class="products-section">
-            <div class="product-grid-12">
-                
-                <!-- 12 Productos del Mockup -->
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
-                <article class="product-card">
-                    <a href="detalle-producto.html"><div class="product-img-placeholder">Imagen</div></a>
-                    <h3><a href="detalle-producto.html">Product Title</a></h3>
-                    <p class="price">$1.000</p>
-                    <button class="btn-primary">Añadir</button>
-                </article>
-
+        <section class="producto-contenedor">
+            
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
             </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
+            <div class="producto">
+                <a href="detalle-producto.html">
+                    <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                    <span class="nombre-producto">Product Title</span>
+                </a>
+                <p>$1.000</p>
+                <button class="btn-primary">Añadir</button>
+            </div>
+
         </section>
     </main>
 
-    <footer>
-        <div class="footer-categories">
-            <a href="#">Categoría X</a>
-            <span class="separator">|</span>
-            <a href="#">Categoría Y</a>
-            <span class="separator">|</span>
-            <a href="#">Categoría Z</a>
+    <footer class="foot-container">
+        <div class="foot-info">
+            <ul>
+                <li><p>© 2026 VolTech. Todos los derechos reservados.</p></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
         </div>
-        <div class="newsletter">
-            <label for="email-newsletter">¡Mantente en contacto! Únete a nuestro boletín</label>
-            <form action="#" class="newsletter-form">
-                <input type="email" id="email-newsletter" placeholder="Ingresa tu correo" required>
-                <button type="submit" class="btn-secondary">Suscribirse</button>
-            </form>
+        <div class="foot-tab">
+            <ul>
+                <li><a href="#">Categoría X</a></li>
+                <li><a href="#">Categoría Y</a></li>
+                <li><a href="#">Categoría Z</a></li>
+                <li>
+                    <form action="#" class="newsletter-form" style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Ingresa tu correo" required style="padding: 5px; border-radius: 4px; border: 1px solid #CBD5E1;">
+                        <button type="submit" class="btn-secondary" style="padding: 5px 10px; border-radius: 4px; background: #4F46E5; color: #fff; border: none;">Suscribirse</button>
+                    </form>
+                </li>
+            </ul>
         </div>
     </footer>
 

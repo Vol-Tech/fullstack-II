@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolTech - Inicio de Sesión</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="img/VolTech Logo - Sin texto.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-tab">
+            <a href="index.html">
+                <img src="img/VolTech Logo - Sin texto.png" alt="VolTech Logo">
+            </a>
+            <input type="checkbox" id="menu-habilitar" class="menu-habilitar">
+            <label for="menu-habilitar" class="menu-icono"><i class="bi bi-list"></i></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a class="icono-carrito" href="carrito.html"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-login">
+        <img src="img/VolTech Logo - Sin texto.png" alt="VolTech Logo Principal">
+
+        <form class="form-container" id="formulario">
+            <h3>Inicio de sesión</h3>
+            
+            <h4>Correo</h4>
+            <input type="text" id="regCorreo" required>
+            
+            <h4>Contraseña</h4>
+            <input type="password" id="regContraseña" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </main>
+
+    <footer class="foot-container">
+        <div class="foot-info">
+            <ul>
+                <li><p>© 2026 VolTech. Todos los derechos reservados.</p></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+        <div class="foot-tab">
+            <ul>
+                <li><a href="#">Categoría X</a></li>
+                <li><a href="#">Categoría Y</a></li>
+                <li><a href="#">Categoría Z</a></li>
+                <li>
+                    <form action="#" class="newsletter-form" style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Ingresa tu correo" required style="padding: 5px; border-radius: 4px; border: 1px solid #CBD5E1;">
+                        <button type="submit" class="btn-secondary" style="padding: 5px 10px; border-radius: 4px; background: #4F46E5; color: #fff; border: none;">Suscribirse</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,32 +1,3 @@
-// Test de guardar productos
-
-/*
-const producto = {
-    nombreProducto: 'Cable HDMI',
-    precio: 4500
-}
-*/
-
-/* se pasa de objeto a texto con stringify para que localStorage lo lea
-localStorage.setItem('producto', JSON.stringify(producto));
-
-// se usa para recuperar el 'objeto'
-const data = JSON.parse(localStorage.getItem('producto'));
-
-// testeo para mostrar los datos del 'objeto' al frontEnd
-const nombreSpan = document.getElementById('nombre-producto');
-const precioSpan = document.getElementById('precio-producto');
-
-// textContent lee o modifica el texto de forma pura (osea segu su etiqueta)
-nombreSpan.textContent = data.nombreProducto;
-precioSpan.textContent = data.precio;
-
-//test de tener muchos productos?*/
-
-// Inventario base guardado en localStorage como pide la rúbrica
-// Inventario base guardado en localStorage como pide la rúbrica
-// Inventario y persistencia en LocalStorage según requerimiento de rúbrica
-// Inventario y persistencia en LocalStorage según requerimiento de rúbrica
 const inventario = {
     'PROD01': { nombre: "Product Title", precio: 1000 },
     'PROD02': { nombre: "Product Title", precio: 1000 },
@@ -61,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             carrito.push(productoSeleccionado);
             
-            // Guardar información del carrito en LOCALSTORAGE (Requisito de rúbrica)
+            // para guardar información del carrito en localstorage
             localStorage.setItem('carritoVoltech', JSON.stringify(carrito));
             
             actualizarContador();
@@ -75,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
-// --- VALIDACIÓN DEL FORMULARIO DE ADMINISTRACIÓN DE PRODUCTOS ---
+//validacion
 document.addEventListener('DOMContentLoaded', () => {
     const formProducto = document.getElementById('form-producto');
     

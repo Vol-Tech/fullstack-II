@@ -18,8 +18,6 @@ const inventario = {
 localStorage.setItem('inventario', JSON.stringify(inventario));
 const datosInventario = JSON.parse(localStorage.getItem('inventario'));
 
-// object pasa todo a una suerte de diccionario, asi que use un for each para mostrar mejor los productos
-
 function mostrarProducto() {
     Object.entries(inventario).forEach(([_, valor], index) => {
         const nombre = document.getElementById(`nom-pro-${index + 1}`);
