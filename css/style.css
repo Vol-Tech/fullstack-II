@@ -42,6 +42,7 @@ body {
 .producto a {
     display: block;
     width: 100%;
+    text-decoration: none;
 }
 
 .nombre-producto {
@@ -49,13 +50,15 @@ body {
     max-width: 250px;
     margin: 0 auto;
 
+    color: #2c2d33;
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .producto p {
-    color: #1E2038;
+    color: #4a4a4a;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -81,7 +84,7 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
 
-    color: #1E2038;
+    color: #2c2d33;
     font-size: 2rem;
 }
 
@@ -215,12 +218,18 @@ body {
 
 .main-login {
     display: flex;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
     min-height: 80vh;
     padding: 2rem;
+}
+
+.main-login img {
+    width: 100%;
+    max-width: 150px;
 }
 
 .form-container {
@@ -300,4 +309,114 @@ body {
 
 .nom-apellidos-container input:hover {
     border: 1px solid #7B7CFF;
+}
+
+/* Nosotros */
+.main-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    min-height: auto;
+    padding: 3rem 2rem;
+}
+
+.nosotros-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+    width: 90%;
+    max-width: 1000px;
+
+    background-color: #E2E5FF;
+    border: 1px solid #7B7CFF;
+
+    margin: 4rem auto;
+    padding: 3rem;
+    border-radius: 12px;
+}
+
+.nosotros-descripcion h2 {
+    color: #2c2d33;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.nosotros-descripcion p {
+    color: #4a4a4a; 
+    line-height: 1.6; 
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+.nosotros-container img {
+    width: 45%;
+    max-width: 500px;
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.nosotros-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    flex: 1;
+}
+
+.marcas-texto {
+    color: #2c2d33;
+    text-align: center;
+    font-size: 2rem;
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.marcas-container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+}
+
+.marcas-container img {
+    width: 100%;
+    height: 150px;
+    max-width: 250px;
+
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .nosotros-container {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .nosotros-container img {
+        width: 100%;
+    }
+
+    .marcas-container {
+        gap: 1rem;
+    }
+
+    .marcas-container img {
+        height: 100px;
+        max-width: 150px;
+    }
+
+    .marcas-texto {
+        font-size: 1.5rem;
+
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+
+        padding: 0 1rem;
+    }
 }

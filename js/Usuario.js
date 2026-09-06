@@ -29,7 +29,7 @@ class Usuario {
         const dominiosValidos = ["@duocuc.cl", "@profesor.duocuc.cl", "@gmail.com"];
         // arrow function de dominio, pasa el correo a minusculas y ve si termina con lo que recorre de la lista
         // de dominios
-        const esValido = dominiosValidos.some(dominio => correo.toLowerCase().endsWith(dominio))
+        const esValido = dominiosValidos.some(dominio => correo.toLowerCase().endsWith(dominio));
         if (!esValido) {
             throw new Error("Error: el dominio debe ser: '@duoc.cl', '@profesor.duoc.cl', '@gmail.com'");
         }
@@ -57,7 +57,6 @@ formulario.addEventListener('submit', function(event) {
 
     const region = document.getElementById('sel-region').value;
     const comuna = document.getElementById('sel-comuna').value;
-
 
     if (correo !== confirmarCorreo) {
         alert("Los correos no coinciden");
@@ -88,7 +87,7 @@ formulario.addEventListener('submit', function(event) {
 
         usuariosRegistrados.push(nuevoUsuario);
         localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-
+        
         alert("¡Registro exitoso!");
         formulario.reset();
    } catch (error) {

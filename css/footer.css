@@ -75,3 +75,45 @@
     content: "\F2DB";
     color: #4F46E5;
 }
+
+@media (max-width: 768px) {
+    .foot-container {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .foot-info ul {
+        flex-direction: column; 
+        padding-left: 0;
+        gap: 1rem;
+    }
+
+    .foot-info ul li:last-child,
+    .foot-tab ul li:last-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .foot-tab ul {
+        flex-wrap: wrap; 
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .foot-tab ul li:last-child {
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .foot-tab ul li:last-child input,
+    .foot-tab ul li:last-child button {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+}
