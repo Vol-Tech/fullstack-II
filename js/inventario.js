@@ -9,10 +9,10 @@ const inventario = {
     'PROD07': { nombre: "Mouse Bluethoot Inalámbrico Slimblade 2.0 - Blanco", precio: 14690},
     'PROD08': { nombre: "Mouse Inalámbrico M280 - Negro", precio: 10490},
 
-    'PROD09': { nombre: "a", precio: 0},
-    'PROD10': { nombre: "a", precio: 0},
-    'PROD11': { nombre: "a", precio: 0},
-    'PROD12': { nombre: "a", precio: 0},
+    'PROD09': { nombre: "Monitor Portátil ASUS 15,6 FHD, 60Hz, IPS, 5ms, ZenScreen MB169CK", precio: 117990},
+    'PROD10': { nombre: "ASUS ROG XG27AQDMES - OLED monitor - 27 - 2560 x 1440 - DisplayPort / HDMI / USB - Black - 240 Hz", precio: 589990},
+    'PROD11': { nombre: "Monitor Gamer ASUS TUF 24, FHD, 180Hz, IPS, 1ms, VG249QL3A", precio: 124990},
+    'PROD12': { nombre: "Monitor Gamer ASUS TUF 32 QHD 170Hz, VA, 1ms, VG32AQA1A" , precio: 232990},
 };
 
 localStorage.setItem('inventario', JSON.stringify(inventario));

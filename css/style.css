@@ -16,12 +16,18 @@ body {
 }
 
 .producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
     padding: 1rem;
     background-color: #E2E5FF;
     border: 1.5px solid #FFFFFF;
     border-radius: 8px;
 
     text-align: center;
+
+    width: 280px;
 }
 
 .producto:hover {
@@ -30,13 +36,15 @@ body {
 
 .producto img {
     display: block;
+
     width: 100%;
-    height: auto;
+    max-width: 250px;
+    height: 200px;
+    
+    object-fit: cover;
 
     margin: 0 auto;
     margin-bottom: 1rem;
-
-    max-width: 250px;
 }
 
 .producto a {
