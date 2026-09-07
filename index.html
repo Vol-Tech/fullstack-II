@@ -4,134 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolTech - Inicio</title>
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="img/VolTech Logo - Sin texto.png" type="image/x-icon">
 </head>
 <body>
 
-
-    <header class="navbar">
-        <div class="nav-left">
-            <div class="logo">
-                <h2><span class="logo-icon">⚡V</span>olTech</h2>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="user-actions">
-            <a href="login.html">Iniciar sesión</a>
-            <span class="separator">|</span>
-            <a href="registro-usuario.html">Registrar usuario</a>
-            <a href="carrito.html" class="carrito">🛒 Carrito (0)</a>
-        </div>
+    <header>
+        <nav class="nav-tab">
+            <a href="index.html">
+                <img src="img/VolTech Logo - Sin texto.png" alt="VolTech Logo">
+            </a>
+            <input type="checkbox" id="menu-habilitar" class="menu-habilitar">
+            <label for="menu-habilitar" class="menu-icono"><i class="bi bi-list"></i></label>
+            <ul>
+                <li><a href="index.html" style="color: #4F46E5; font-weight: bold;">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a class="icono-carrito" href="carrito.html"></a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>TIENDA ONLINE VOLTECH</h1>
-                <p>Tu mejor opción para adquirir artículos de tecnología. Descarga nuestras guías o explora nuestro catálogo actualizado de productos de alta calidad y rendimiento.</p>
+        <div style="display: flex; justify-content: flex-end; padding: 10px 40px; gap: 15px; font-size: 0.9rem;">
+            <a href="login.html" style="color: #4F46E5; text-decoration: none;">Iniciar sesión</a>
+            <span>|</span>
+            <a href="registro-usuario.html" style="color: #4F46E5; text-decoration: none;">Registrar usuario</a>
+        </div>
+
+        <section class="hero-section" style="display: flex; justify-content: space-between; align-items: center; padding: 40px; background-color: #E2E5FF; margin: 20px 40px; border-radius: 10px; border: 1px solid #7B7CFF;">
+            <div class="hero-content" style="flex: 1;">
+                <h1 style="font-size: 2.2rem; margin-bottom: 20px; color: #1E2038;">TIENDA ONLINE VOLTECH</h1>
+                <p style="color: #4a4a4a; line-height: 1.6; margin-bottom: 25px;">Tu mejor opción para adquirir artículos de tecnología y hardware de alto rendimiento. Descarga nuestras guías o explora nuestro catálogo actualizado.</p>
                 <button class="btn-primary" onclick="window.location.href='productos.html'">Ver productos</button>
             </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <span>Imagen representativa de la tienda</span>
-                </div>
+            <div class="hero-image" style="flex: 1; text-align: center;">
+                <img src="img/VolTech Logo - Sin texto.png" alt="Banner Tienda" style="max-width: 200px; height: auto;">
             </div>
         </section>
 
         <section class="products-section">
-            <div class="product-grid">
-                <!-- Producto 1 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
-
-                <!-- Producto 2 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
-
-                <!-- Producto 3 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
-
-                <!-- Producto 4 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
+            <h2 class="titulo-productos">PRODUCTOS DESTACADOS</h2>
+            <div class="producto-contenedor">
                 
-                <!-- Producto 5 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
 
-                <!-- Producto 6 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
 
-                <!-- Producto 7 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
 
-                <!-- Producto 8 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder">Imagen</div>
-                    <h3>Product Title</h3>
-                    <p class="attributes">Attributes</p>
-                    <p class="price">$00.00</p>
-                </article>
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
+
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
+
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
+
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
+                
+                <div class="producto">
+                    <a href="detalle-producto.html">
+                        <img src="img/VolTech Logo - Sin texto.png" alt="Producto">
+                        <span class="nombre-producto">Product Title</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #64748B;">Attributes</p>
+                    <p style="font-weight: bold; color: #4F46E5;">$00.00</p>
+                    <button class="btn-primary" style="margin-top: 10px;">Añadir</button>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-categories">
-            <a href="#">Categoría X</a>
-            <span class="separator">|</span>
-            <a href="#">Categoría Y</a>
-            <span class="separator">|</span>
-            <a href="#">Categoría Z</a>
+    <footer class="foot-container">
+        <div class="foot-info">
+            <ul>
+                <li><p>VolTech</p></li>
+                <li><a href="#">Categoría X</a></li>
+                <li><a href="#">Categoría Y</a></li>
+                <li><a href="#">Categoría Z</a></li>
+                <li><p>Estemos en Contacto!</p></li>
+            </ul>
         </div>
-        <div class="newsletter">
-            <label for="email-newsletter">¡Mantente en contacto! Únete a nuestro boletín</label>
-            <form action="#" class="newsletter-form">
-                <input type="email" id="email-newsletter" placeholder="Ingresa tu correo" required>
-                <button type="submit" class="btn-secondary">Suscribirse</button>
-            </form>
+        <div class="foot-tab">
+            <ul>
+                <li><i class="icono-visa"></i></li>
+                <li><i class="icono-visa"></i></li>
+                <li><i class="icono-visa"></i></li>
+                <li>
+                    <form action="#" style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Ingresar correo" required style="padding: 5px 10px; border-radius: 4px; border: 1px solid #CBD5E1;">
+                        <button type="submit" style="padding: 5px 10px; background: #4F46E5; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Suscribirse</button>
+                    </form>
+                </li>
+            </ul>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

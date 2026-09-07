@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/VolTech Logo - Sin texto.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav-tab">
+      <a href="#">
+          <img src="img/VolTech Logo - Sin texto.png" alt="icono-tab">
+      </a>
+      <input type="checkbox" id="menu-habilitar" class="menu-habilitar">
+      <label for="menu-habilitar" class="menu-icono"><i class="bi bi-list"></i></label>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a class="icono-carrito" href="#"></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="main-login">
+
+    <form class="form-container" id="formulario">
+      <h3>Registro de usuario</h3>
+      <h4>Run</h4>
+      <input type="text" id="regRun" required>
+      <h4>Nombre y Apellido</h4>
+      <div class="nom-apellidos-container">
+        <input type="text" id="regNombre" required>
+        <input type="text" id="regApellido" required>
+      </div>
+      <h4>Correo</h4>
+      <input type="text" id="regCorreo" required>
+      <h4>Confirmar Correo</h4>
+      <input type="text" id="regConfirmarCorreo" required>
+      <h4>Constraseña</h4>
+      <input type="password" id="regContraseña" required>
+      <h4>Confirmar Contraseña</h4>
+      <input type="password" id="regConfirmContraseña" required>
+      <h4>Telefono (opcional)</h4>
+      <input type="tel" id="regTelefono">
+
+      <div class="select-container">
+        <select name="region" id="sel-region">
+          <option value="">Seleccione la Region</option>
+        </select>
+
+        <select name="comuna" id="sel-comuna">
+          <option value="">Seleccione la Comuna</option>
+        </select>
+      </div>
+
+      <button type="submit">Registrar</button>
+    </form>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/usuariosRegistrados.js"></script>
+
+  <script src="js/Usuario.js"></script>
+  <script src="js/regiones.js"></script>
+</body>
+
+</html>

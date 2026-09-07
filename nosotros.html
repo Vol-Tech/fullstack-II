@@ -1,44 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nosotros</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nosotros</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/VolTech Logo - Sin texto.png" type="image/x-icon">
 </head>
 
 <body>
+
   <header>
-    <nav class="navbar navbar-expand">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html" alt="Logo">
-          <img src="img/VolTech Logo - Sin texto.png" alt="Icono VolTech" width="40" height="40">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blogs.html">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav class="nav-tab">
+      <a href="#">
+        <img src="img/VolTech Logo - Sin texto.png" alt="icono-tab">
+      </a>
+      <input type="checkbox" id="menu-habilitar" class="menu-habilitar">
+      <label for="menu-habilitar" class="menu-icono"><i class="bi bi-list"></i></label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a class="icono-carrito" href="#"></a></li>
+      </ul>
     </nav>
   </header>
-</body>
+  
+  <main class="main-nosotros">
+    <div class="nosotros-container">
+      
+      <div class="nosotros-descripcion">
+        <h2>¿Quienes Somos?</h2>
+        <p>
+          Hoy día, tanto los especialistas en tecnología como los entusiastas de esta creen que ensamblar
+          computadoras y actualizar sus elementos tecnológicos es una necesidad permanente. En este caso sería VolTech, un proyecto de comercio electrónico que tiene como objetivo proporcionar una experiencia
+          de navegación dinámica tanto interactiva y visualmente, a través de un catálogo
+          enfocado en hardware y periféricos.
+        </p>
+      </div>
 
+      <img src="img/foto-nosotros.jpeg" alt="nosotros-foto">
+    </div>
+
+    <h2 class="marcas-texto">Marcas con las que Trabajamos</h2>
+
+    <div class="marcas-container">
+      <img src="img/marcas/master-g.png" alt="marca">
+      <img src="img/marcas/baseus.png" alt="marca-2">
+      <img src="img/marcas/hp.png" alt="marca-3">
+      <img src="img/marcas/asus.png" alt="marca-4">
+      <img src="img/marcas/Logitech-logo.png" alt="marca-5">
+    </div>
+  </main>
+
+  <footer>
+    
+    <div class="foot-container">
+
+      <div class="foot-info">
+        <ul>
+          <li><p>VolTech</p></li>
+          <li>
+            <a href="#">
+              Categoria X
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Categoria Y
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Categoria Z
+            </a>
+          </li>
+          <li><p>Estemos en Contacto!</p></li>
+        </ul>
+      </div>
+
+      <div class="foot-tab">
+        <ul>
+          <li><i class="icono-visa"></i></li>
+          <li><i class="icono-visa"></i></li>
+          <li><i class="icono-visa"></i></li>
+          <li>
+            <input type="email" placeholder="Ingresar correo">
+            <button>Suscribirse</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
