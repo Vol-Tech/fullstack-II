@@ -27,38 +27,23 @@
     </nav>
   </header>
 
-  <main>
-    <div class="contacto-encabezado">
-      <img src="img/VolTech Logo - Sin texto.png" alt="Logo Vol">
-      <h1>VolTech</h1>
-    </div>
-    <div class="contacto-contenedor">
-      <section class="contacto-tarjeta">
-        <div class="contacto-titulo">
-          <h3>FORMULARIO DE CONTACTOS</h3>
-        </div>
-        <!-- Agregue no validate ya que trata de validar el @ y no estoy seguro de usar esa opcion-->
-        <form id="formulario-contacto" class="contacto-form" novalidate>
+    <main class="main-contacto">
+    
+    <img src="img/VolTech Logo - Sin texto.png" alt="main-logo">
 
-          <div class="grupo-input">
-            <label for="nombre">NOMBRE COMPLETO</label>
-            <input type="text" id="nombre" placeholder="Ingresa tu nombre completo">
-          </div>
+    <form class="form-container" id="formulario">
 
-          <div class="grupo-input">
-            <label for="correo">CORREO</label>
-            <input type="email" id="correo" placeholder="Ingresa tu correo electronico">
-          </div>
+      <h1>Formulario de Contactos</h1>
+      <h4>NOMBRE COMPLETO</h4>
+      <input type="nombre" id="#" required>
+      <h4>CORREO</h4>
+      <input type="correo" id="#" required>
+      <h4>CONTENIDO</h4>
+      <input type="contenido" id="#" required>
 
-          <div class="grupo-input">
-            <label for="contenido">CONTENIDO</label>
-            <input type="contenido" id="contenido" placeholder="Diganos cual es su caso para contactarnos">
-          </div>
+      <button type="submit">ENVIAR</button>
+    </form>
 
-          <button>ENVIAR</button>
-        </form>
-      </section>
-    </div>
   </main>
 </body>
 
