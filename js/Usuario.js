@@ -10,7 +10,7 @@ class Usuario {
         this.comuna = comuna;
         this.tipoUsuario = tipoUsuario;
     }
-
+//metodos de validacion del formulario
     validarRun(run) {
         if (!run || run.length < 7 || run.length > 9 || run.includes('-') || run.includes('.')) {
             throw new Error("El RUN debe tener entre 7 y 9 caracteres, sin puntos ni guion");   
@@ -42,6 +42,8 @@ class Usuario {
     }
 }
 
+let editIndex = null;
+
 function actualizarTablaUsuarios() {
     const cuerpoTabla = document.getElementById('cuerpo-tabla-usuarios');
     if (!cuerpoTabla) return;
@@ -50,21 +52,60 @@ function actualizarTablaUsuarios() {
     cuerpoTabla.innerHTML = '';
 
     if (usuarios.length === 0) {
-        cuerpoTabla.innerHTML = '<tr><td colspan="5" style="text-align: center;">No hay usuarios registrados.</td></tr>';
+        cuerpoTabla.innerHTML = '<tr><td colspan="6" style="text-align: center;">No hay usuarios registrados.</td></tr>';
         return;
     }
 
-    usuarios.forEach(u => {
+    usuarios.forEach((u, index) => {
         const fila = document.createElement('tr');
         fila.innerHTML = `
-            <td>${u.run}</td>
-            <td>${u.nombre} ${u.apellidos || ''}</td>
-            <td>${u.correo}</td>
-            <td>${u.region}</td>
-            <td>${u.comuna}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">${u.run}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">${u.nombre} ${u.apellidos || ''}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">${u.correo}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">${u.region}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">${u.comuna}</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">
+                <button onclick="cargarUsuarioParaEditar(${index})" style="background: #f0ad4e; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; margin-right: 5px;">Editar</button>
+                <button onclick="eliminarUsuario(${index})" style="background: #d9534f; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Eliminar</button>
+            </td>
         `;
         cuerpoTabla.appendChild(fila);
     });
+}
+//funcion para la edicion de usuarios
+function cargarUsuarioParaEditar(index) {
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const u = usuarios[index];
+    if (!u) return;
+
+    document.getElementById('nombre').value = u.nombre;
+    document.getElementById('correo').value = u.correo;
+    document.getElementById('confCorreo').value = u.correo;
+    document.getElementById('contrasena').value = u.contraseña;
+    document.getElementById('confContrasena').value = u.contraseña;
+    document.getElementById('telefono').value = u.telefono || '';
+    document.getElementById('rol').value = u.tipoUsuario || '';
+    document.getElementById('region').value = u.region;
+
+    const selectRegion = document.getElementById('region');
+    selectRegion.dispatchEvent(new Event('change'));
+
+    setTimeout(() => {
+        document.getElementById('comuna').value = u.comuna;
+    }, 100);
+
+    editIndex = index;
+    const btnSubmit = document.querySelector('#formUsuario button[type="submit"]');
+    if (btnSubmit) btnSubmit.textContent = "ACTUALIZAR USUARIO";
+}
+//funcion para eliminar usuarios preguntando si asi lo desea
+function eliminarUsuario(index) {
+    if (confirm("¿Estás seguro de que deseas eliminar este usuario?")) {
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        usuarios.splice(index, 1);
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        actualizarTablaUsuarios();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -102,19 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const nuevoUsuario = new Usuario(
-                    run,
-                    nombre,
-                    apellidos,
-                    correo,
-                    contraseña,
-                    telefono,
-                    region,
-                    comuna,
-                    "Cliente"
-                );
-
+                const nuevoUsuario = new Usuario(run, nombre, apellidos, correo, contraseña, telefono, region, comuna, "Cliente");
                 let usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+                
                 usuariosRegistrados.push(nuevoUsuario);
                 localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
                 
@@ -159,23 +190,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const nuevoUsuario = new Usuario(
-                    runTemp,
-                    nombreCompleto,
-                    "", 
-                    correo,
-                    contraseña,
-                    telefono,
-                    region,
-                    comuna,
-                    rol
-                );
-
+                const usuarioData = new Usuario(runTemp, nombreCompleto, "", correo, contraseña, telefono, region, comuna, rol);
                 let usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-                usuariosRegistrados.push(nuevoUsuario);
+
+                if (editIndex !== null) {
+                    usuariosRegistrados[editIndex] = usuarioData;
+                    editIndex = null;
+                    
+                    const btnSubmit = document.querySelector('#formUsuario button[type="submit"]');
+                    if (btnSubmit) btnSubmit.textContent = "REGISTRAR";
+                    
+                    alert("Usuario actualizado exitosamente");
+                } else {
+                    usuariosRegistrados.push(usuarioData);
+                    alert("Usuario registrado");
+                }
+
                 localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-                
-                alert("¡Usuario registrado desde el panel!");
                 formularioAdmin.reset();
                 actualizarTablaUsuarios();
             } catch (error) {
