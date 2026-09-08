@@ -543,8 +543,8 @@ body {
     justify-content: space-between;
 
     padding: 1rem;
-    background-color: #cdffd0;
-    border: 1.5px solid #8ac98d;
+    background-color: #e5fde7;
+    border: 1.5px solid #b9e7ba;
     transition: border-color 0.2s ease;
     border-radius: 8px;
 
@@ -595,7 +595,7 @@ body {
 }
 
 .producto-oferta:hover {
-    border: 1.5px solid #039e43;
+    border: 1.5px solid #09b852;
 }
 
 
