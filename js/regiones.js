@@ -1,38 +1,42 @@
 const regiones = {
-    'Región Metropolitana de Santiago': { comuna: ["Santiago", "La Florida"] },
-    'Región de la Araucanía': { comuna: ["Villarica", "Pucón"]},
-    'Región de Ñuble': { comuna: ["Chillán", "San Carlos"]}
+    'Región Metropolitana de Santiago': { comuna: ["Santiago", "La Florida", "Maipú", "Providencia"] },
+    'Región de la Araucanía': { comuna: ["Temuco", "Villarica", "Pucón"] },
+    'Región de Ñuble': { comuna: ["Chillán", "San Carlos"] }
 };
 
-const selectRegion = document.getElementById('sel-region');
-const selectComuna = document.getElementById('sel-comuna');
+const selectRegion = document.getElementById('region') || document.getElementById('sel-region');
+const selectComuna = document.getElementById('comuna') || document.getElementById('sel-comuna');
 
-// lo mismo que para producto, pero solo recorre llaves
 function mostrarRegiones() {
+    if (!selectRegion) return;
+    
+    selectRegion.innerHTML = '<option value="">-- Seleccione una región --</option>';
+
     Object.keys(regiones).forEach(nombreRegion => {
         const opcion = document.createElement('option');
-
         opcion.value = nombreRegion;
         opcion.textContent = nombreRegion;
-
         selectRegion.appendChild(opcion);
-    })
+    });
 }
 
 document.addEventListener('DOMContentLoaded', mostrarRegiones);
 
-selectRegion.addEventListener('change', (e) => {
-    selectComuna.innerHTML = "";
+if (selectRegion && selectComuna) {
+    selectRegion.addEventListener('change', (e) => {
+        selectComuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>';
 
-    const region = e.target.value;
-    const comunas = regiones[region].comuna;
+        const regionSeleccionada = e.target.value;
 
-    comunas.forEach((value) => {
-        const opcion = document.createElement('option');
+        if (regiones[regionSeleccionada]) {
+            const listaComunas = regiones[regionSeleccionada].comuna;
 
-        opcion.value = value;
-        opcion.textContent = value;
-
-        selectComuna.appendChild(opcion);
-    })
-});
+            listaComunas.forEach(comuna => {
+                const opcion = document.createElement('option');
+                opcion.value = comuna;
+                opcion.textContent = comuna;
+                selectComuna.appendChild(opcion);
+            });
+        }
+    });
+}

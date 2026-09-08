@@ -3,7 +3,6 @@
 .foot-container {
     display: flex;
     flex-direction: column;
-
     box-shadow: 0 -2px 8px rgba(30, 27, 75, 0.05);
     gap: 2rem;
     padding: 1.5rem 2rem;
@@ -16,14 +15,12 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-
 }
 
 .foot-info ul {
     display: flex;
     flex-direction: row;
     flex: 1;
-
     align-items: center;
     list-style: none;
     gap: 2rem;
@@ -37,6 +34,7 @@
 .foot-info a {
     color: #475569;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .foot-info a:hover {
@@ -58,7 +56,6 @@
     flex-direction: row;
     flex: 1;
     align-items: center;
-
     list-style: none;
     gap: 2rem;
 }
@@ -98,7 +95,6 @@
     font-family: "bootstrap-icons";
     font-style: normal;
     font-size: 1.5rem;
-
     content: "\F2DB";
     color: #6366F1;
 }

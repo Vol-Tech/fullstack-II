@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios - Administrador</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-container">
+        
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>⚡ VolTech</h2>
+            </div>
+            <ul class="admin-menu">
+                <li><a href="admin-home.html">📊 Dashboard</a></li>
+                <li><a href="admin-pedidos.html">📦 Pedidos</a></li>
+                <li><a href="admin-productos.html">🛠️ Inventario</a></li>
+                <li><a href="admin-reportes.html">📄 Reportes</a></li>
+                <li><a href="admin-empleados.html">👔 Empleados</a></li>
+                <li><a href="admin-usuarios.html" class="active">👥 Usuarios</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Usuarios del Sistema</h2>
+                <div class="admin-user-info"><span>Administrador</span></div>
+            </header>
+
+            <section class="admin-content">
+                
+                <div class="form-card">
+                    <h3>NUEVO USUARIO</h3>
+                    
+                    <form id="formUsuario">
+                        <div class="form-group">
+                            <label for="nombre">NOMBRE COMPLETO:</label>
+                            <input type="text" id="nombre" required maxlength="100" placeholder="Ej: Juan Pérez">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">CORREO:</label>
+                            <input type="email" id="correo" required maxlength="100" placeholder="usuario@duoc.cl">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confCorreo">CONFIRMAR CORREO:</label>
+                            <input type="email" id="confCorreo" required maxlength="100" placeholder="usuario@duoc.cl">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contrasena">CONTRASEÑA:</label>
+                            <input type="password" id="contrasena" required minlength="4" maxlength="10" placeholder="Entre 4 a 10 caracteres">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confContrasena">CONFIRMAR CONTRASEÑA:</label>
+                            <input type="password" id="confContrasena" required minlength="4" maxlength="10" placeholder="Repite la contraseña">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">TELÉFONO (opcional):</label>
+                            <input type="tel" id="telefono" placeholder="Ej: 912345678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rol">TIPO DE USUARIO:</label>
+                            <select id="rol" required>
+                                <option value="">-- Seleccione --</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Cliente">Cliente</option>
+                            </select>
+                        </div>
+
+                        <div class="select-container" style="display: flex; gap: 1rem; margin-bottom: 20px;">
+                            <div style="flex: 1;">
+                                <label for="region" style="color: #1E2038; font-size: 0.9rem; margin-bottom: 8px; display: block;">REGIÓN:</label>
+                                <select id="region" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #CBD5E1; background-color: #F5F6FF;">
+                                    <option value="">-- Seleccione la región --</option>
+                                </select>
+                            </div>
+                            <div style="flex: 1;">
+                                <label for="comuna" style="color: #1E2038; font-size: 0.9rem; margin-bottom: 8px; display: block;">COMUNA:</label>
+                                <select id="comuna" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #CBD5E1; background-color: #F5F6FF;">
+                                    <option value="">-- Seleccione la comuna --</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">REGISTRAR</button>
+                    </form>
+                </div>
+
+                <div class="form-card" style="margin-top: 30px;">
+                    <h3>LISTADO DE USUARIOS</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                        <thead>
+                            <tr style="background-color: #f4f4f4;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">RUN</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Nombre</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Correo</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Región</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Comuna</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo-tabla-usuarios">
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/regiones.js"></script>
+    <script src="../js/Usuario.js"></script>
+    <script src="../js/adminUsuarios.js"></script>
+</body>
+</html>

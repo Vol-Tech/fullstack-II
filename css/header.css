@@ -9,6 +9,7 @@
 header {
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .nav-tab {
@@ -16,7 +17,6 @@ header {
     flex-direction: row;
     box-shadow: 0 2px 8px rgba(30, 27, 75, 0.08);
     gap: 2rem;
-
     padding: 1.5rem 2rem;
     background-color: #FFFFFF;
     border-bottom: 1px solid #EEF2FF;
@@ -27,7 +27,6 @@ header {
     flex-direction: row;
     flex: 1;
     align-items: center;
-
     list-style: none;
     gap: 2rem;
 }
@@ -57,7 +56,6 @@ header {
 .icono-carrito::before {
     font-family: "bootstrap-icons";
     font-size: 1.5rem;
-
     content: "\F242";
     color: #475569;
     transition: color 0.2s ease;
@@ -70,7 +68,6 @@ header {
 .menu-icono {
     display: none;
     font-size: 2rem;
-
     color: #475569;
     cursor: pointer;
 }
@@ -80,14 +77,11 @@ header {
 }
 
 @media (max-width: 768px) {
-
     .nav-tab {
         justify-content: space-between;
         align-items: center;
-        
         padding: 1rem 1.5rem;
         position: relative;
-        
     }
 
     .menu-icono {
@@ -97,16 +91,13 @@ header {
     .nav-tab ul {
         display: none;
         flex-direction: column;
-
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-
         background-color: #FFFFFF;
         padding: 2rem 0;
         gap: 1.5rem;
-
         box-shadow: 0 10px 15px rgba(30, 27, 75, 0.1);
         border-bottom: 2px solid #6366F1;
     }
