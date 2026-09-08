@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
 
-    box-shadow: 0 -1.5px 3px rgba(100, 116, 139, 0.5);
+    box-shadow: 0 -2px 8px rgba(30, 27, 75, 0.05);
     gap: 2rem;
     padding: 1.5rem 2rem;
     margin-top: auto;
     background-color: #FFFFFF;
+    border-top: 1px solid #EEF2FF;
 }
 
 .foot-info {
@@ -34,16 +35,16 @@
 }
 
 .foot-info a {
-    color: #64748B;
+    color: #475569;
     text-decoration: none;
 }
 
 .foot-info a:hover {
-    color: #4F46E5;
+    color: #6366F1;
 }
 
 .foot-info p {
-    color: #64748B;
+    color: #475569;
 }
 
 .foot-tab {
@@ -67,13 +68,39 @@
     margin-right: 2rem;
 }
 
+.foot-tab input {
+    border: 1px solid #C7D2FE;
+    padding: 6px 12px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.foot-tab input:focus {
+    border-color: #6366F1;
+}
+
+.foot-tab button {
+    background-color: #6366F1;
+    color: #FFFFFF;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.foot-tab button:hover {
+    background-color: #4338CA;
+}
+
 .icono-visa::before {
     font-family: "bootstrap-icons";
     font-style: normal;
     font-size: 1.5rem;
 
     content: "\F2DB";
-    color: #4F46E5;
+    color: #6366F1;
 }
 
 @media (max-width: 768px) {
