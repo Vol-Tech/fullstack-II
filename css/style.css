@@ -22,7 +22,8 @@ body {
     
     padding: 1rem;
     background-color: #E2E5FF;
-    border: 1.5px solid #FFFFFF;
+    border: 1.5px solid #C7D2FE;
+    transition: border-color 0.2s ease;
     border-radius: 8px;
 
     text-align: center;
@@ -31,7 +32,7 @@ body {
 }
 
 .producto:hover {
-    border: 1.5px solid #7B7CFF;
+    border: 1.5px solid #6366F1;
 }
 
 .producto img {
@@ -58,7 +59,7 @@ body {
     max-width: 250px;
     margin: 0 auto;
 
-    color: #2c2d33;
+    color: #1E1B4B;
 
     white-space: nowrap;
     overflow: hidden;
@@ -66,23 +67,24 @@ body {
 }
 
 .producto p {
-    color: #4a4a4a;
+    color: #475569;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .producto button {
     color: #FFFFFF;
-    background-color: #4F46E5;
+    background-color: #6366F1;
     padding: 3px 10px;
     border-radius: 1.5px;
+    transition: background-color 0.2s ease;
 
     border: none;
     cursor: pointer;
 }
 
 .producto button:hover {
-    background-color: #2E2A88;
+    background-color: #4338CA;
     color: #FFFFFF;
 }
 
@@ -92,7 +94,7 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
 
-    color: #2c2d33;
+    color: #1E1B4B;
     font-size: 2rem;
 }
 
@@ -115,12 +117,12 @@ body {
 }
 
 .ruta li {
-    color: #1E2038;
+    color: #475569;
     list-style: none;
 }
 
 .ruta a {
-    color: #1E2038;
+    color: #475569;
     text-decoration: none;
 }
 
@@ -135,10 +137,16 @@ body {
 
 .detalle-main-container button{
     border: none;
-    color: black;
-    background-color: #4F46E5;
+    color: #FFFFFF;
+    background-color: #6366F1;
+    padding: 8px 16px;
+    border-radius: 4px;
 
     cursor: pointer;
+}
+
+.detalle-main-container button:hover {
+    background-color: #4338CA;
 }
 
 .detalle-container {
@@ -152,7 +160,7 @@ body {
     width: 100%;
     max-width: 450px;
 
-    color: white;
+    color: #475569;
 }
 
 .cantidad-producto {
@@ -163,12 +171,15 @@ body {
 }
 
 .cantidad-producto h3 {
-    color: white;
+    color: #1E1B4B;
 }
 
 .cantidad-producto select {
     padding: 3px 10px;
     border: none;
+    border: 1px solid #C7D2FE;
+    border-radius: 4px;
+
     cursor: pointer;
 }
 
@@ -177,7 +188,7 @@ body {
     flex-direction: row;
 
     gap: 1rem;
-    color: white;
+    color: #1E1B4B;
 }
 
 .foto-detalle-producto-container {
@@ -185,8 +196,9 @@ body {
     max-width: 500px;
     
     padding: 1rem;
-    background-color: #E2E5FF;
-    border: 2px solid #FFFFFF;
+    background-color: #EEF2FF;
+    border: 1.5px solid #C7D2FE;
+    border-radius: 8px;
 }
 
 .foto-principal {
@@ -195,7 +207,8 @@ body {
     width: 100%;
     height: auto;
 
-    border: 2px solid black;
+    border: 1px solid C7D2FE;
+    border-radius: 6px;
 }
 
 .detalle-mini-foto-container {
@@ -213,13 +226,14 @@ body {
     height: 80px;
 
     object-fit: cover;
-    border: 2px solid black;
+    border: 2px solid #C7D2FE;
+    border-radius: 6px;
 
     cursor: pointer;
 }
 
 .detalle-mini-foto-container img:hover {
-    border: 2px solid orange;
+    border: 2px solid #38BDF8;
 }
 
 /* login.html */
@@ -248,8 +262,8 @@ body {
     width: 100%;
     max-width: 400px;
 
-    background-color: #E2E5FF;
-    border: 1.5px solid #7B7CFF;
+    background-color: #EEF2FF;
+    border: 1.5px solid #C7D2FE;
 
     margin: 0 auto;
     padding: 3rem 2rem;
@@ -258,29 +272,33 @@ body {
 
 .form-container h4 {
     text-align: left;
-    color: #1E2038;
+    color: #1E1B4B;
 }
 
 .form-container input {
-    border: 1px solid #FFFFFF;
+    border: 1px solid #C7D2FE;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
-.form-container input:hover {
-    border: 1px solid #7B7CFF;
+.form-container input:hover,
+.form-container input:focus {
+    border: 1px solid #6366F1;
+    outline: none;
 }
 
 .form-container button {
     color: #FFFFFF;
-    background-color: #4F46E5;
-    padding: 3px 10px;
-    border-radius: 1.5px;
+    background-color: #6366F1;
+    padding: 8px 10px;
+    border-radius: 4px;
 
     border: none;
     cursor: pointer;
 }
 
 .form-container button:hover {
-    background-color: #2E2A88;
+    background-color: #4338CA;
     color: #FFFFFF;
 }
 
@@ -290,33 +308,27 @@ body {
     gap: 1rem;
 }
 
-.select-container select {
+.select-container select,
+.nom-apellidos-container input {
     width: 100%;
     max-width: 450px;
 
     background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #C7D2FE;
+
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
-.select-container select:hover {
-    border: 1px solid #7B7CFF;
+.select-container select:hover,
+.nom-apellidos-container input:hover {
+    border: 1px solid #6366F1;
 }
 
 .nom-apellidos-container {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-}
-
-.nom-apellidos-container input {
-    width: 100%;
-    max-width: 450px;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-}
-
-.nom-apellidos-container input:hover {
-    border: 1px solid #7B7CFF;
 }
 
 /* Nosotros */
@@ -338,8 +350,8 @@ body {
     width: 90%;
     max-width: 1000px;
 
-    background-color: #E2E5FF;
-    border: 1px solid #7B7CFF;
+    background-color: #EEF2FF;
+    border: 1px solid #C7D2FE;
 
     margin: 4rem auto;
     padding: 3rem;
@@ -347,13 +359,13 @@ body {
 }
 
 .nosotros-descripcion h2 {
-    color: #2c2d33;
+    color: #1E1B4B;
     font-size: 2.2rem;
     margin: 0;
 }
 
 .nosotros-descripcion p {
-    color: #4a4a4a; 
+    color: #475569; 
     line-height: 1.6; 
     font-size: 1.05rem;
     text-align: left;
@@ -376,7 +388,7 @@ body {
 }
 
 .marcas-texto {
-    color: #2c2d33;
+    color: #1E1B4B;
     text-align: center;
     font-size: 2rem;
 
