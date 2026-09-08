@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     padding: 1rem;
     background-color: #E2E5FF;
     border: 1.5px solid #C7D2FE;
@@ -41,7 +41,7 @@ body {
     width: 100%;
     max-width: 250px;
     height: 200px;
-    
+
     object-fit: cover;
 
     margin: 0 auto;
@@ -135,7 +135,7 @@ body {
     gap: 5rem;
 }
 
-.detalle-main-container button{
+.detalle-main-container button {
     border: none;
     color: #FFFFFF;
     background-color: #6366F1;
@@ -194,7 +194,7 @@ body {
 .foto-detalle-producto-container {
     width: 100%;
     max-width: 500px;
-    
+
     padding: 1rem;
     background-color: #EEF2FF;
     border: 1.5px solid #C7D2FE;
@@ -365,8 +365,8 @@ body {
 }
 
 .nosotros-descripcion p {
-    color: #475569; 
-    line-height: 1.6; 
+    color: #475569;
+    line-height: 1.6;
     font-size: 1.05rem;
     text-align: left;
 }
@@ -436,87 +436,6 @@ body {
     max-width: 220px;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-
-    width: 100%;
-    max-width: 700px;
-
-    background-color: #E2E5FF;
-    border: 1.5px solid #7B7CFF;
-
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    border-radius: 8px;
-}
-
-.form-container h4 {
-    text-align: left;
-    color: #1E2038;
-}
-
-.form-container input {
-    border: 1px solid #FFFFFF;
-}
-
-.form-container input:hover {
-    border: 1px solid #7B7CFF;
-}
-
-.form-container button {
-    color: #FFFFFF;
-    background-color: #4F46E5;
-    padding: 15px 27px;
-    border-radius: 1.5px;
-
-    border: none;
-    cursor: pointer;
-
-    margin: auto;
-}
-
-.form-container button:hover {
-    background-color: #2E2A88;
-    color: #FFFFFF;
-}
-
-.select-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-.select-container select {
-    width: 100%;
-    max-width: 450px;
-
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-}
-
-.select-container select:hover {
-    border: 1px solid #7B7CFF;
-}
-
-.nom-apellidos-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-.nom-apellidos-container input {
-    width: 100%;
-    max-width: 450px;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-}
-
-.nom-apellidos-container input:hover {
-    border: 1px solid #7B7CFF;
-}
-
 /* fin del css del contacto */
 
 .titulo-index {
@@ -542,9 +461,10 @@ body {
 }
 
 .blog-imagen img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+    width: 92%;
+    max-width: 500px;
+    object-fit: cover;
+
     border: 1.5px solid #4d4a8f6b;
 }
 
@@ -558,18 +478,18 @@ body {
     font-size: 2.5rem;
 }
 
-.blog-tarjeta button {
+.nosotros-descripcion button {
     color: #FFFFFF;
     background-color: #4F46E5;
-    padding: 13px 20px;
+    padding: 10px 18px;
     border-radius: 1.5px;
 
-    margin-top: 2.3rem;
+    margin-top: 2rem;
     border: none;
     cursor: pointer;
 }
 
-.blog-tarjeta button:hover {
+.nosotros-descripcion button:hover {
     background-color: #2E2A88;
     color: #FFFFFF;
 }
@@ -591,7 +511,8 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #adadff;
+    background-color: #EEF2FF;
+    border: 1.5px solid #C7D2FE;
 
     margin: 2.3rem;
     margin-left: 4.5rem;
@@ -614,17 +535,16 @@ body {
     width: 100%;
     max-width: 600px;
     height: auto;
-    border: 1.5px solid #4d4a8f6b;
 }
 
 .producto-oferta {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     padding: 1rem;
-    background-color: #E2E5FF;
-    border: 1.5px solid #C7D2FE;
+    background-color: #cdffd0;
+    border: 1.5px solid #8ac98d;
     transition: border-color 0.2s ease;
     border-radius: 8px;
 
@@ -639,7 +559,7 @@ body {
     width: 100%;
     max-width: 250px;
     height: 200px;
-    
+
     object-fit: cover;
 
     margin: 0 auto;
@@ -675,7 +595,7 @@ body {
 }
 
 .producto-oferta:hover {
-    border: 1.5px solid #95fac7;
+    border: 1.5px solid #039e43;
 }
 
 
