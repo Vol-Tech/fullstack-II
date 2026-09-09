@@ -37,7 +37,6 @@ formulario.addEventListener('submit', function(event) {
         localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
         
         alert("¡Registro exitoso!");
-        formulario.reset();
    } catch (error) {
         alert(error.message);
    }
