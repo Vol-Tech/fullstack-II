@@ -571,4 +571,24 @@ body {
 
         padding: 0 1rem;
     }
+
+    .detalle-main-container {
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        gap: 2rem;
+    }
+
+    .foto-detalle-producto-container {
+        max-width: 100%;
+    }
+
+    .parrafo-producto {
+        max-width: 100%;
+    }
+
+    .ruta {
+        margin-left: 1rem;
+        flex-wrap: wrap;
+    }
 }
