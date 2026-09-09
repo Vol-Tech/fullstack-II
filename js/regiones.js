@@ -7,36 +7,32 @@ const regiones = {
 const selectRegion = document.getElementById('region') || document.getElementById('sel-region');
 const selectComuna = document.getElementById('comuna') || document.getElementById('sel-comuna');
 
+// lo mismo que para producto, pero solo recorre llaves
 function mostrarRegiones() {
-    if (!selectRegion) return;
-    
-    selectRegion.innerHTML = '<option value="">-- Seleccione una región --</option>';
-
     Object.keys(regiones).forEach(nombreRegion => {
         const opcion = document.createElement('option');
+
         opcion.value = nombreRegion;
         opcion.textContent = nombreRegion;
+
         selectRegion.appendChild(opcion);
-    });
+    })
 }
 
 document.addEventListener('DOMContentLoaded', mostrarRegiones);
 
-if (selectRegion && selectComuna) {
-    selectRegion.addEventListener('change', (e) => {
-        selectComuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>';
+selectRegion.addEventListener('change', (e) => {
+    selectComuna.innerHTML = "";
 
-        const regionSeleccionada = e.target.value;
+    const region = e.target.value;
+    const comunas = regiones[region].comuna;
 
-        if (regiones[regionSeleccionada]) {
-            const listaComunas = regiones[regionSeleccionada].comuna;
+    comunas.forEach((value) => {
+        const opcion = document.createElement('option');
 
-            listaComunas.forEach(comuna => {
-                const opcion = document.createElement('option');
-                opcion.value = comuna;
-                opcion.textContent = comuna;
-                selectComuna.appendChild(opcion);
-            });
-        }
-    });
-}
+        opcion.value = value;
+        opcion.textContent = value;
+
+        selectComuna.appendChild(opcion);
+    })
+});
